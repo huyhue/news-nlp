@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Language Processing</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome Udacity</h1>
+    </header>
+    <div id="app" class="container">
+      <div class="form-container">
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <h1>Evaluate a News Article with Natural Language Processing</h1>
+          <input
+            id="url"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Enter url to research"
+          />
+          <input
+            type="submit"
+            id="btnSubmit"
+            name=""
+            value="Research"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return handleSubmit(event)"
+          />
+        </form>
+        <section>
+          <h3>Result output</h3>
+          <h5>Polarity:</h5>
+          <div id="polarity"></div>
+          <h5>Agreement:</h5>
+          <div id="agreement"></div>
+          <h5>Subjectivity:</h5>
+          <div id="subjectivity"></div>
+          <h5>Text Article:</h5>
+          <div id="textArticle"></div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <nav class="end">
+        <div class="copyright">HuyHue fpt coding ©2023</div>
+      </nav>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      } else {
+        console.log("Service Working not supported");
+      }
+    </script>
+  </body>
+</html>

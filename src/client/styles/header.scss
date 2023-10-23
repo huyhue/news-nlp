@@ -1,0 +1,11 @@
+$keycolor: rgb(10, 22, 187);
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 40px;
+}
+
+h1 {
+  color: $keycolor;
+}
